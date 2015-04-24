@@ -49,10 +49,10 @@ Matthias Gamer, Jim Lemon and Ian Fellows Puspendra Singh (2012). irr: Various C
 
 You can run any the code locally in the same way your would run any shiny app:
 
-Download [R](http://cran.r-project.org/mirrors.html) and [RStudio](http://www.rstudio.com/). Once in RStudio, install shiny
+Download [R](http://cran.r-project.org/mirrors.html) and [RStudio](http://www.rstudio.com/). Install shiny
 
 ```
 > install.packages("shiny")
 ```
 
-Download the code and open `ui.R` or `server.R`. Click on the "Run App" button on the top right. That's it.
+Download the code and open `ui.R` or `server.R` using RStudio. Click on the "Run App" button on the top right. That's it.
