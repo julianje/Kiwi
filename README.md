@@ -3,6 +3,16 @@ KIWI
 
 Kiwi is a collection of webapps to do common statistical procedures. All apps are implemented using [shiny](http://shiny.rstudio.com/) and powered by [R](http://www.r-project.org/).
 
+## Use Kiwi online
+
+* [Bootstrap estimates](http://jjara.shinyapps.io/Bootstrapper/)
+
+* [Calculate partial correlations](http://jjara.shinyapps.io/PCor/)
+
+* [Inter-rater reliability tools](http://jjara.shinyapps.io/Coders/)
+
+See below on each app's description.
+
 ## Apps
 
 #### Bootstrapper
@@ -34,11 +44,7 @@ Coders is an interface for calculating and visualizing inter-rater reliability.
 
 Coders uses the R irr package:
 
-
-
-## Running Kiwi online
-
-See below on each app's description.
+Matthias Gamer, Jim Lemon and Ian Fellows Puspendra Singh (2012). irr: Various Coefficients of Interrater Reliability and Agreement. R package version 0.84. http://CRAN.R-project.org/package=irr
 
 ### Running Kiwi locally
 
