@@ -26,6 +26,16 @@ PCor uses the R ppcor package:
 Seongho Kim (2012). ppcor: Partial and Semi-partial (Part) correlation. R package version 1.0.
   http://CRAN.R-project.org/package=ppcor
 
+#### Coders
+
+[Run Coders online](http://jjara.shinyapps.io/Coders/)
+
+Coders is an interface for calculating and visualizing inter-rater reliability.
+
+Coders uses the R irr package:
+
+
+
 ## Running Kiwi online
 
 See below on each app's description.

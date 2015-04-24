@@ -24,11 +24,6 @@ shinyServer(function(input, output){
     selectInput('vary', 'Variable 2', names(Data()))
   })
   
-  output$summary <- renderPrint({
-    if (is.null(input$file1)) { return() }
-    summary(Data()[,c(input$varx)])
-  })
-  
   output$distPlot <- renderPlot({
     
     if (is.null(input$file1)) { return() }

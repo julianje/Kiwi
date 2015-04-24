@@ -1,12 +1,11 @@
 library(shiny)
 
 shinyUI(fluidPage(
+  titlePanel("Kiwi Bootstrapper"),
   # Side bar
   sidebarLayout(
     sidebarPanel(
-      h4("Usage"),
-      p("Upload a csv file and choose two columns. Some statistics will use both columns; others only use the first one. Your data is deleted when you close the window."),
-      HTML('<a href="https://github.com/julianje/Bunny/blob/master/Bunny/Bootstrapper/ExampleData.csv">Download an example file.</a>'),
+      img(src="Kiwi_small.png"),
       fileInput('file1', 'Choose CSV File',
                 accept=c('text/csv', 
                          'text/comma-separated-values,text/plain', 
@@ -19,12 +18,13 @@ shinyUI(fluidPage(
                   min=1,
                   max=50,
                   value=30),
-      HTML('Implemented by <a href="http://web.mit.edu/jjara/www/">Julian</a> and powered by R and shiny.')
+      HTML('Implemented by <a href="http://web.mit.edu/jjara/www/">Julian</a> and powered by R, shiny, and boot.')
       ),
     mainPanel(
       plotOutput("distPlot"),
-      h2("Data summary of variable 1"),
-      verbatimTextOutput("summary")
+      h4("Usage"),
+      p("Upload a csv file and choose two columns. Some statistics will use both columns; others only use the first one. Your data is deleted when you close the window."),
+      HTML('<a href="http://web.mit.edu/jjara/www/KiwiExamples/ExampleData.csv">Download an example file.</a>')
     )
   )
 ))
