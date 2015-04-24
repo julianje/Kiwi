@@ -19,22 +19,22 @@ shinyServer(function(input, output){
   
   output$var1 = renderUI({
     if (is.null(input$file1)) { return() }
-    selectInput('var1', 'Variable 1', names(Data()))
+    selectInput('var1', 'Variable 1', c("Do Not Use",names(Data())))
   })
 
   output$var2 = renderUI({
     if (is.null(input$file1)) { return() }
-    selectInput('var2', 'Variable 2', names(Data()))
+    selectInput('var2', 'Variable 2', c("Do Not Use",names(Data())))
   })
 
   output$var3 = renderUI({
     if (is.null(input$file1)) { return() }
-    selectInput('var3', 'Variable 3', names(Data()))
+    selectInput('var3', 'Variable 3', c("Do Not Use",names(Data())))
   })
   
   output$var4 = renderUI({
     if (is.null(input$file1)) { return() }
-    selectInput('var4', 'Variable 4', names(Data()))
+    selectInput('var4', 'Variable 4', c("Do Not Use",names(Data())))
   })
   
   output$distPlot <- renderPlot({
@@ -43,16 +43,14 @@ shinyServer(function(input, output){
     if (!(input$var1 %in% names(Data()))){ return() }
     
     d<-Data()
-
-    if (input$use=="first two"){
-      res<-pcor(d[,c(input$var1,input$var2)],method=input$method)
-    }
-    if (input$use=="first three"){
-      res<-pcor(d[,c(input$var1,input$var2,input$var3)],method=input$method)
-    }
-    if (input$use=="all four"){
-      res<-pcor(d[,c(input$var1,input$var2,input$var3,input$var4)],method=input$method)
-    }
+    inputs<-c(input$var1,input$var2,input$var3,input$var4)
+    inputs<-inputs[which(inputs!="Do Not Use")]
+    inputs<-unique(inputs)
+    
+    # You need at least 2 variables
+    if (length(inputs)<2){ return()}
+    
+    res<-pcor(d[,inputs],method=input$method)
     
     correls<-round(res$estimate,2)
     correls<-gather(add_rownames(data.frame(correls)),Variable,value,-rowname)
