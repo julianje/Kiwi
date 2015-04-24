@@ -47,7 +47,7 @@ Matthias Gamer, Jim Lemon and Ian Fellows Puspendra Singh (2012). irr: Various C
 
 ### Running Kiwi locally
 
-You can run any app here as you would any shiny app:
+You can run any the code locally in the same way your would run any shiny app:
 
 Download [R](http://cran.r-project.org/mirrors.html) and [RStudio](http://www.rstudio.com/). Once in RStudio, install shiny
 
