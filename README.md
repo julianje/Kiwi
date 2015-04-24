@@ -1,4 +1,4 @@
-![Kiwi](Logo/Kiwi_2.png)![Kiwi](Logo/Kiwi_small.png)
+![Kiwi](Logo/Kiwi_3.png)
 
 Kiwi is a collection of webapps to do common statistical procedures. All apps are implemented using [shiny](http://shiny.rstudio.com/) and powered by [R](http://www.r-project.org/).
 
