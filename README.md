@@ -1,3 +1,5 @@
+![Kiwi](Logo/Kiwi_small.png)![Kiwi](Logo/Kiwi_2.png)
+
 KIWI
 ====
 
