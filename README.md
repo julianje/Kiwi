@@ -11,7 +11,6 @@ Kiwi is a collection of webapps to do common statistical procedures. All apps ar
 
 * [Inter-rater reliability tools](http://jjara.shinyapps.io/Coders/)
 
-See below on each app's description.
 
 ## Apps
 
