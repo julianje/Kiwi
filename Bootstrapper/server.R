@@ -38,7 +38,7 @@ shinyServer(function(input, output){
       TitleA=paste("Bootstrapped samples of correlation between",input$varx,"and",input$vary,"\n")
     }
     if (input$statistic=="Mean difference"){
-      Samples <- boot(Data(),function(x,id){return(mean(x[id,c(input$varx)],na.rm=T)-mean(x[id,c(input$vary)],na.rm=T))},input$Samples)
+      Samples <- boot(Data(),function(x,id){return(mean(x[id,c(input$varx)],na.rm=T)-mean(x[id,c(sample(input$vary))],na.rm=T))},input$Samples)
       TitleA=paste("Bootstrapped samples of mean difference between",input$varx,"and",input$vary,"\n")
     }
     res = boot.ci(Samples,type="basic")$basic
